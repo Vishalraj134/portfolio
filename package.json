@@ -1,0 +1,21 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "Personal Portfolio Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "live server",
+    "build:css": "tailwindcss -i ./css/input.css -o ./css/style.css --watch"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "tailwindcss"
+  ],
+  "author": "Vishal Raj",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "tailwindcss": "^3.4.1"
+  }
+} 
