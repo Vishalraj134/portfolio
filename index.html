@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-900 text-white transition-all duration-300">
@@ -90,7 +91,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
                 <div class="flex flex-col md:flex-row items-center justify-between gap-8">
                     <!-- Profile Image -->
-                    <div class="w-48 h-48 md:w-64 md:h-64 relative group">
+                    <div class="w-48 h-48 md:w-64 md:h-64 relative group animate-scaleIn">
                         <img 
                             src="images/profile.jpg" 
                             alt="Vishal Raj" 
@@ -103,22 +104,22 @@
                     </div>
 
                     <!-- Text Content -->
-                    <div class="text-center md:text-left flex-1">
+                    <div class="text-center md:text-left flex-1 animate-slideInRight delay-200">
                         <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight">
                             <div class="mb-2 overflow-hidden">
                                 <span class="inline-block typing-animation">
                                     <span class="text-gray-100">Hi, I'm</span> 
-                                    <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 text-transparent bg-clip-text animate-gradient">
-                                        <span class="wave-text" style="--i: 1">V</span>
-                                        <span class="wave-text" style="--i: 2">i</span>
-                                        <span class="wave-text" style="--i: 3">s</span>
-                                        <span class="wave-text" style="--i: 4">h</span>
-                                        <span class="wave-text" style="--i: 5">a</span>
-                                        <span class="wave-text" style="--i: 6">l</span>
-                                        <span class="wave-text" style="--i: 7">&nbsp;</span>
-                                        <span class="wave-text" style="--i: 8">R</span>
-                                        <span class="wave-text" style="--i: 9">a</span>
-                                        <span class="wave-text" style="--i: 10">j</span>
+                                    <span class="gradient-animate glow-text name-container relative group">
+                                        <span class="name-letter rainbow-text glow-strong floating-letter" style="animation-delay: 0.1s">V</span>
+                                        <span class="name-letter rainbow-text glow-strong floating-letter" style="animation-delay: 0.2s">i</span>
+                                        <span class="name-letter rainbow-text glow-strong floating-letter" style="animation-delay: 0.3s">s</span>
+                                        <span class="name-letter rainbow-text glow-strong floating-letter" style="animation-delay: 0.4s">h</span>
+                                        <span class="name-letter rainbow-text glow-strong floating-letter" style="animation-delay: 0.5s">a</span>
+                                        <span class="name-letter rainbow-text glow-strong floating-letter" style="animation-delay: 0.6s">l</span>
+                                        <span class="name-letter">&nbsp;</span>
+                                        <span class="name-letter rainbow-text glow-strong floating-letter" style="animation-delay: 0.8s">R</span>
+                                        <span class="name-letter rainbow-text glow-strong floating-letter" style="animation-delay: 0.9s">a</span>
+                                        <span class="name-letter rainbow-text glow-strong floating-letter" style="animation-delay: 1.0s">j</span>
                                     </span>
                                 </span>
                             </div>
@@ -180,41 +181,173 @@
             </div>
         </div>
 
-        <!-- About Section -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
-            <div class="text-center">
-                <h2 class="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">About Me</h2>
-                <div class="bg-gray-800 rounded-lg p-6 sm:p-8 max-w-3xl mx-auto shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                    <p class="text-gray-300 text-base sm:text-lg">
-                        I'm a Third year Computer Science student at Institute of Engineering and Mansgement. 
-                        I specialize in full-stack development and have a keep interest in 
-                        machine learning.
-                    </p>
-                    <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
-                        <div class="p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors duration-300 transform hover:-translate-y-1">
-                            <h3 class="font-bold text-indigo-400">Frontend</h3>
-                            <p class="text-sm text-gray-300">React, HTML, CSS</p>
+        <!-- Projects Section -->
+        <section class="py-20 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4 animate-fadeInUp">Featured Projects</h2>
+                    <p class="text-gray-300 animate-fadeInUp delay-100">Some of my recent work</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg card-3d card-stack hover-3d" data-speed="0.02">
+                        <div class="card-shine"></div>
+                        <div class="relative">
+                            <img src="images/project1.png" alt="Project 1" class="w-full h-48 sm:h-56 object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute top-0 right-0 p-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-sm rounded-bl-lg">
+                                Featured
+                            </div>
                         </div>
-                        <div class="p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors duration-300 transform hover:-translate-y-1">
-                            <h3 class="font-bold text-indigo-400">Backend</h3>
-                            <p class="text-sm text-gray-300">Node.js,Express.js</p>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Portfolio</h3>
+                            <p class="text-gray-300 mb-4">A portfolio website built with modern web technologies.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-gradient-to-r from-indigo-600 to-purple-600 px-3 py-1 rounded-full text-sm">TailwindCSS</span>
+                                <span class="bg-gradient-to-r from-indigo-600 to-purple-600 px-3 py-1 rounded-full text-sm">js</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <a href="#" class="text-indigo-400 hover:text-purple-400">View Project →</a>
+                                <a href="#" class="text-gray-400 hover:text-indigo-400">
+                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
-                        <div class="p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors duration-300 transform hover:-translate-y-1">
-                            <h3 class="font-bold text-indigo-400">CSS framework</h3>
-                            <p class="text-sm text-gray-300">Tailwind CSS,Bootstrap</p>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg card-3d card-stack hover-3d" data-speed="0.02">
+                        <div class="card-shine"></div>
+                        <div class="relative">
+                            <img src="images/project2.png" alt="Project 2" class="w-full h-48 sm:h-56 object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute top-0 right-0 p-2 bg-gradient-to-r from-purple-600 to-pink-600 text-sm rounded-bl-lg">
+                                Latest
+                            </div>
                         </div>
-                        <div class="p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors duration-300 transform hover:-translate-y-1">
-                            <h3 class="font-bold text-indigo-400">Database</h3>
-                            <p class="text-sm text-gray-300">MongoDB, SQL</p>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Farmer App</h3>
+                            <p class="text-gray-300 mb-4">A Fullstack farmer app website built with modern web technologies.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-gradient-to-r from-purple-600 to-pink-600 px-3 py-1 rounded-full text-sm">js</span>
+                                <span class="bg-gradient-to-r from-purple-600 to-pink-600 px-3 py-1 rounded-full text-sm">TailwindCss</span>
+                                <span class="bg-gradient-to-r from-purple-600 to-pink-600 px-3 py-1 rounded-full text-sm">HTML</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <a href="#" class="text-purple-400 hover:text-pink-400">View Project →</a>
+                                <a href="#" class="text-gray-400 hover:text-purple-400">
+                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
-                        <div class="p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors duration-300 transform hover:-translate-y-1">
-                            <h3 class="font-bold text-indigo-400">Tools</h3>
-                            <p class="text-sm text-gray-300">Git,Vercel</p>
+                    </div>
+
+                    <!-- Add Project Card 3 -->
+                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg card-3d card-stack hover-3d" data-speed="0.02">
+                        <div class="card-shine"></div>
+                        <div class="relative">
+                            <img src="images/project3.png" alt="Project 3" class="w-full h-48 sm:h-56 object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute top-0 right-0 p-2 bg-gradient-to-r from-indigo-600 to-blue-600 text-sm rounded-bl-lg">
+                                In Progress
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Country information</h3>
+                            <p class="text-gray-300 mb-4">A React App website built with modern web technologies.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-gradient-to-r from-indigo-600 to-blue-600 px-3 py-1 rounded-full text-sm">React</span>
+                                <span class="bg-gradient-to-r from-indigo-600 to-blue-600 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                                <span class="bg-gradient-to-r from-indigo-600 to-blue-600 px-3 py-1 rounded-full text-sm">TailwindCSS</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <a href="#" class="text-indigo-400 hover:text-blue-400">View Project →</a>
+                                <a href="#" class="text-gray-400 hover:text-indigo-400">
+                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="text-center mt-10">
+                    <a href="projects.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
+                        View All Projects
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="py-20 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4 animate-fadeInUp">My Skills</h2>
+                    <p class="text-gray-300 animate-fadeInUp delay-100">Technologies I work with</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fadeInUp delay-200">
+                    <!-- Technical Skills -->
+                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-lg p-6 sm:p-8 shadow-xl animate-slideInLeft delay-300 card-3d parallax-element" data-speed="0.03">
+                        <h3 class="text-2xl font-bold text-indigo-400 mb-6">Technical Skills</h3>
+                        
+                        <!-- Skill Bars -->
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span>HTML/CSS</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                                    <div class="bg-gradient-to-r from-indigo-500 to-purple-500 h-2 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span>JavaScript</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                                    <div class="bg-gradient-to-r from-indigo-500 to-purple-500 h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Framework Skills -->
+                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-lg p-6 sm:p-8 shadow-xl animate-slideInRight delay-300 card-3d parallax-element" data-speed="0.04">
+                        <h3 class="text-2xl font-bold text-indigo-400 mb-6">Frameworks & Tools</h3>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                            <div class="bg-gray-700 rounded-lg p-4 text-center floating-3d hover-3d">
+                                <span class="text-sm">React</span>
+                            </div>
+                            <div class="bg-gray-700 rounded-lg p-4 text-center floating-3d hover-3d">
+                                <span class="text-sm">Node.js</span>
+                            </div>
+                            <div class="bg-gray-700 rounded-lg p-4 text-center floating-3d hover-3d">
+                                <span class="text-sm">TailwindCSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-10">
+                    <a href="skills.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
+                        View All Skills
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->

@@ -4,13 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Student Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-900 text-white transition-all duration-300">
-    <!-- Navigation (same as index.html) -->
-    <!-- ... Copy the nav section from index.html ... -->
+    <!-- Navigation -->
+    <nav class="navbar-glass fixed w-full z-10 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent hover:scale-105 transition-all duration-500 hover:tracking-wider">
+                        Portfolio
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="nav-link group">
+                            Home
+                            <span class="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                        </a>
+                        <a href="projects.html" class="nav-link group">
+                            Projects
+                            <span class="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                        </a>
+                        <a href="skills.html" class="nav-link group">
+                            Skills
+                            <span class="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                        </a>
+                        <a href="contact.html" class="nav-link group">
+                            Contact
+                            <span class="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                        </a>
+                    </div>
+                </div>
 
-    <main class="pt-16 transform transition-all duration-500 translate-y-0 opacity-100">
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button
+                        id="mobile-menu-button"
+                        class="inline-flex items-center justify-center p-2 rounded-md hover:bg-gray-700/50 focus:outline-none transition-colors duration-300"
+                    >
+                        <svg
+                            class="h-6 w-6"
+                            stroke="currentColor"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" class="transition-transform duration-300 ease-in-out"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800/50 backdrop-blur-sm">
+                <a href="index.html" class="block hover:bg-gray-700/50 px-3 py-2 rounded-md transition-colors duration-300">
+                    Home
+                </a>
+                <a href="projects.html" class="block hover:bg-gray-700/50 px-3 py-2 rounded-md transition-colors duration-300">
+                    Projects
+                </a>
+                <a href="skills.html" class="block hover:bg-gray-700/50 px-3 py-2 rounded-md transition-colors duration-300">
+                    Skills
+                </a>
+                <a href="contact.html" class="block hover:bg-gray-700/50 px-3 py-2 rounded-md transition-colors duration-300">
+                    Contact
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-12">
         <div class="bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-800 relative overflow-hidden">
             <!-- Decorative Elements -->
             <div class="absolute top-0 left-0 w-full h-full">
@@ -19,15 +87,15 @@
                 <div class="absolute -bottom-32 left-1/2 w-64 h-64 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 relative z-10">
-                <div class="max-w-3xl mx-auto">
+                <div class="max-w-3xl mx-auto animate-scaleIn">
                     <h1 class="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-center">
                         <span class="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Get in Touch</span>
                     </h1>
                     
-                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-lg p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-lg p-6 sm:p-8 shadow-xl animate-fadeInUp delay-200 card-3d parallax-element" data-speed="0.01">
                         <!-- Contact Info -->
                         <div class="mb-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-                            <div class="p-4 rounded-lg bg-gray-700/50 hover:bg-gray-700 transition-colors duration-300">
+                            <div class="p-4 rounded-lg bg-gray-700/50 card-3d hover-3d card-stack">
                                 <div class="inline-block p-3 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-lg mb-3">
                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -35,8 +103,9 @@
                                 </div>
                                 <h3 class="text-lg font-semibold mb-1">Email</h3>
                                 <p class="text-gray-400">name@gmail.com</p>
+                                <div class="card-shine"></div>
                             </div>
-                            <div class="p-4 rounded-lg bg-gray-700/50 hover:bg-gray-700 transition-colors duration-300">
+                            <div class="p-4 rounded-lg bg-gray-700/50 card-3d hover-3d card-stack">
                                 <div class="inline-block p-3 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-lg mb-3">
                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -46,7 +115,7 @@
                                 <h3 class="text-lg font-semibold mb-1">Location</h3>
                                 <p class="text-gray-400">Kolkata, India</p>
                             </div>
-                            <div class="p-4 rounded-lg bg-gray-700/50 hover:bg-gray-700 transition-colors duration-300">
+                            <div class="p-4 rounded-lg bg-gray-700/50 card-3d hover-3d card-stack">
                                 <div class="inline-block p-3 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-lg mb-3">
                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />

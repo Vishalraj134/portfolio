@@ -4,11 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills | Student Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-900 text-white transition-all duration-300">
-    <!-- Navigation (same as index.html) -->
-    <!-- ... Copy the nav section from index.html ... -->
+    <!-- Navigation -->
+    <nav class="navbar-glass fixed w-full z-10 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent hover:scale-105 transition-all duration-500 hover:tracking-wider">
+                        Portfolio
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="nav-link group">
+                            Home
+                            <span class="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                        </a>
+                        <a href="projects.html" class="nav-link group">
+                            Projects
+                            <span class="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                        </a>
+                        <a href="skills.html" class="nav-link group">
+                            Skills
+                            <span class="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                        </a>
+                        <a href="contact.html" class="nav-link group">
+                            Contact
+                            <span class="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button
+                        id="mobile-menu-button"
+                        class="inline-flex items-center justify-center p-2 rounded-md hover:bg-gray-700/50 focus:outline-none transition-colors duration-300"
+                    >
+                        <svg
+                            class="h-6 w-6"
+                            stroke="currentColor"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" class="transition-transform duration-300 ease-in-out"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800/50 backdrop-blur-sm">
+                <a href="index.html" class="block hover:bg-gray-700/50 px-3 py-2 rounded-md transition-colors duration-300">
+                    Home
+                </a>
+                <a href="projects.html" class="block hover:bg-gray-700/50 px-3 py-2 rounded-md transition-colors duration-300">
+                    Projects
+                </a>
+                <a href="skills.html" class="block hover:bg-gray-700/50 px-3 py-2 rounded-md transition-colors duration-300">
+                    Skills
+                </a>
+                <a href="contact.html" class="block hover:bg-gray-700/50 px-3 py-2 rounded-md transition-colors duration-300">
+                    Contact
+                </a>
+            </div>
+        </div>
+    </nav>
 
     <main class="pt-16 transform transition-all duration-500 translate-y-0 opacity-100">
         <div class="bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-800 relative overflow-hidden">
@@ -21,9 +89,9 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 relative z-10">
                 <h1 class="text-3xl sm:text-4xl font-bold mb-8 sm:mb-10 text-center">My Skills</h1>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fadeInUp delay-200">
                     <!-- Technical Skills -->
-                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-lg p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-lg p-6 sm:p-8 shadow-xl animate-slideInLeft delay-300 card-3d parallax-element" data-speed="0.03">
                         <h2 class="text-2xl font-bold mb-6 text-indigo-400">Technical Skills</h2>
                         
                         <!-- Programming Languages -->
@@ -64,27 +132,27 @@
                         <div>
                             <h3 class="text-lg font-semibold mb-4">Frameworks & Libraries</h3>
                             <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                                <div class="bg-gray-700 rounded-lg p-4 text-center hover:bg-gray-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group">
+                                <div class="bg-gray-700 rounded-lg p-4 text-center floating-3d hover-3d">
                                     <div class="absolute inset-0 bg-gradient-to-br from-indigo-500 to-purple-500 opacity-0 group-hover:opacity-10 rounded-lg transition-opacity duration-300"></div>
                                     <span class="text-sm">React</span>
                                 </div>
-                                <div class="bg-gray-700 rounded-lg p-4 text-center hover:bg-gray-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group">
+                                <div class="bg-gray-700 rounded-lg p-4 text-center floating-3d hover-3d">
                                     <div class="absolute inset-0 bg-gradient-to-br from-indigo-500 to-purple-500 opacity-0 group-hover:opacity-10 rounded-lg transition-opacity duration-300"></div>
                                     <span class="text-sm">Node.js</span>
                                 </div>
-                                <div class="bg-gray-700 rounded-lg p-4 text-center hover:bg-gray-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group">
+                                <div class="bg-gray-700 rounded-lg p-4 text-center floating-3d hover-3d">
                                     <div class="absolute inset-0 bg-gradient-to-br from-indigo-500 to-purple-500 opacity-0 group-hover:opacity-10 rounded-lg transition-opacity duration-300"></div>
                                     <span class="text-sm">TailwindCSS</span>
                                 </div>
-                                <div class="bg-gray-700 rounded-lg p-4 text-center hover:bg-gray-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group">
+                                <div class="bg-gray-700 rounded-lg p-4 text-center floating-3d hover-3d">
                                     <div class="absolute inset-0 bg-gradient-to-br from-indigo-500 to-purple-500 opacity-0 group-hover:opacity-10 rounded-lg transition-opacity duration-300"></div>
                                     <span class="text-sm">Express.js</span>
                                 </div>
-                                <div class="bg-gray-700 rounded-lg p-4 text-center hover:bg-gray-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group">
+                                <div class="bg-gray-700 rounded-lg p-4 text-center floating-3d hover-3d">
                                     <div class="absolute inset-0 bg-gradient-to-br from-indigo-500 to-purple-500 opacity-0 group-hover:opacity-10 rounded-lg transition-opacity duration-300"></div>
                                     <span class="text-sm">MongoDB</span>
                                 </div>
-                                <div class="bg-gray-700 rounded-lg p-4 text-center hover:bg-gray-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group">
+                                <div class="bg-gray-700 rounded-lg p-4 text-center floating-3d hover-3d">
                                     <div class="absolute inset-0 bg-gradient-to-br from-indigo-500 to-purple-500 opacity-0 group-hover:opacity-10 rounded-lg transition-opacity duration-300"></div>
                                     <span class="text-sm">Git</span>
                                 </div>
@@ -93,7 +161,7 @@
                     </div>
 
                     <!-- Soft Skills -->
-                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-lg p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-lg p-6 sm:p-8 shadow-xl animate-slideInRight delay-300 card-3d parallax-element" data-speed="0.04">
                         <h2 class="text-2xl font-bold mb-6 text-indigo-400">Soft Skills</h2>
                         <div class="space-y-6">
                             <div class="flex items-center space-x-4">
