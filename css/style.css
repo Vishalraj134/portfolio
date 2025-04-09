@@ -41,6 +41,8 @@ main {
 /* Project card hover effect */
 .project-card {
     transition: transform 0.3s ease;
+    position: relative;
+    z-index: 2;
 }
 
 .project-card:hover {
@@ -190,8 +192,11 @@ main {
     backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(99, 102, 241, 0.2);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 /* Add gradient shine effect to navbar */
@@ -225,6 +230,7 @@ main {
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(99, 102, 241, 0.2);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 999;
 }
 
 .mobile-menu.visible {
@@ -660,4 +666,22 @@ main {
 
 .floating-letter {
     animation: floatLetter 3s ease-in-out infinite;
+}
+
+/* Section z-index handling */
+.section-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Skills section */
+.skills-section {
+    position: relative;
+    z-index: 2;
+}
+
+/* Contact form */
+.contact-section {
+    position: relative;
+    z-index: 2;
 } 
